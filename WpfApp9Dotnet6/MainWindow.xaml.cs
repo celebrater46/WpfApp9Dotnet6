@@ -24,5 +24,12 @@ namespace WpfApp9Dotnet6
         {
             InitializeComponent();
         }
+
+        private void Button_OnClick(object sender, RoutedEventArgs e)
+        {
+            // new Window1().ShowDialog(); // Added this as Page (Not Window)
+            new Window2().ShowDialog(); // As Window
+            // throw new NotImplementedException();
+        }
     }
 }

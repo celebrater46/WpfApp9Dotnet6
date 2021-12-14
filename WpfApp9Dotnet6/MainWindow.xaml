@@ -6,7 +6,44 @@
         xmlns:local="clr-namespace:WpfApp9Dotnet6"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <!-- <Grid> -->
+    <!-- -->
+    <!-- </Grid> -->
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="USER(_U)" Target="{Binding ElementName=userName}" Width="80"/>
+            <TextBox x:Name="userName" Text="Tarou" Width="200" Margin="5" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="MEMO(_M)" Target="{Binding ElementName=memo}" Width="80"/>
+            <TextBox x:Name="memo" Text="AAAA" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" 
+                     VerticalScrollBarVisibility="Auto" Width="200" Height="60" Margin="5" />
+            <!-- AcceptReturn means "New Line by Enter -->
+        </StackPanel>
+        
+        <TextBlock Text="BBBBBBBBBBBB" />
+        <TextBlock Text="Bold Bold..." FontWeight="Bold" FontSize="16" />
+        <TextBlock>CCCCCCCCCCCCC</TextBlock>
+        <TextBlock Foreground="Blue">
+            DDDDDDDDDDDDDD<LineBreak/>
+            EEEEEEEEEEEEEEE
+        </TextBlock>
+        <TextBlock Text="FFFFFFFFFFFFFFFFFFFFFFFFFFFF" TextWrapping="Wrap" Width="40" />
+        <TextBlock>
+            GGGGGGGGG
+            <Underline>HHHHHHHHHHHHHH</Underline>
+            <Bold>IIIJJJJJJJ</Bold>
+            <Run Foreground="Green" FontWeight="Bold" FontSize="18">KKKKKKK</Run>
+            <Run Background="Goldenrod" FontFamily="Meiryo">LLLLLLLLLMMM</Run>
+        </TextBlock>
+        
+        <StackPanel Orientation="Horizontal">
+            <CheckBox Content="CheckBox" Margin="5" />
+            <CheckBox Content="CheckBox" IsChecked="True" Margin="5" />
+            <ToggleButton Content="Toggle Button" Margin="5" />
+            <ToggleButton Content="Toggle Button" IsChecked="True" Margin="5" />
+        </StackPanel>
+        
+        <Button x:Name="Button" Content="Next Page" Click="Button_OnClick" />
+    </StackPanel>
 </Window>
